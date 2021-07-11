@@ -3,6 +3,7 @@ mainConfig:
   path: esbuild.main.config.js
   src: src/main/main.ts
   output: dist/main
+
 rendererConfig:
   type: vite
   path: src/renderer/vite.config.js
