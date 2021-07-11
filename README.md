@@ -1,1 +1,5 @@
-# Bootstrapped with @electron-esbuild/create-app
+# electron-esbuild-obfuscated
+
+todo:
+
+- [ ] dockerize?
