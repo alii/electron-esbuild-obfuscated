@@ -11,6 +11,9 @@ async function createWindow() {
 		height: 820,
 		minHeight: 600,
 		minWidth: 650,
+		vibrancy: 'appearance-based',
+		frame: false,
+		titleBarStyle: 'hiddenInset',
 		webPreferences: {
 			nodeIntegration: true,
 			devTools: true,
@@ -45,7 +48,9 @@ async function createWindow() {
 		win!.focus();
 
 		if (is.development) {
-			win!.webContents.openDevTools({mode: 'bottom'});
+			win!.webContents.openDevTools({
+				mode: 'detach',
+			});
 		}
 	});
 }

@@ -6,7 +6,6 @@ body {
 	margin: 0;
 	font-family: -apple-system, Arial, sans-serif;
 	-webkit-font-smoothing: antialiased;
-	background: white;
 }
 
 h1 {
@@ -17,4 +16,15 @@ h1 {
 
 .padding {
 	padding: 1rem;
+}
+
+.title-bar {
+	user-select: none;
+	height: 38px;
+	line-height: 0;
+	display: flex;
+	align-items: center;
+	color: white;
+	justify-content: center;
+	-webkit-app-region: drag;
 }

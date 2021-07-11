@@ -71,5 +71,18 @@
 			"buildResources": "resources"
 		},
 		"publish": null
-	}
+	},
+	"description": "Obfuscated Electron setup that uses ESBuild under the hood.",
+	"main": "dist/index.js",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/alii/electron-esbuild-obfuscated.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/alii/electron-esbuild-obfuscated/issues"
+	},
+	"homepage": "https://github.com/alii/electron-esbuild-obfuscated#readme"
 }
