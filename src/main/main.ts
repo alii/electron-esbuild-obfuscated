@@ -11,7 +11,7 @@ async function createWindow() {
 		height: 820,
 		minHeight: 600,
 		minWidth: 650,
-		vibrancy: 'appearance-based',
+		vibrancy: 'under-window',
 		frame: false,
 		titleBarStyle: 'hiddenInset',
 		webPreferences: {
@@ -66,7 +66,13 @@ app.on('window-all-closed', () => {
 });
 
 app.on('activate', () => {
-	if (win === null && app.isReady()) {
+	if (!app.isReady()) {
+		return;
+	}
+
+	if (win === null) {
 		void createWindow();
+	} else {
+		win.show();
 	}
 });
