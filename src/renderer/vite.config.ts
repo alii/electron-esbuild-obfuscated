@@ -1,7 +1,7 @@
 import {defineConfig} from 'vite';
 import reactRefresh from '@vitejs/plugin-react-refresh';
 
-module.exports = defineConfig({
+export default defineConfig({
 	plugins: [reactRefresh()],
 	build: {
 		target: 'chrome89',

@@ -3,7 +3,7 @@ import {format} from 'url';
 import {app, BrowserWindow} from 'electron';
 import {is} from 'electron-util';
 
-let win: BrowserWindow | null = null;
+let win: BrowserWindow | undefined;
 
 async function createWindow() {
 	win = new BrowserWindow({
@@ -17,7 +17,6 @@ async function createWindow() {
 		webPreferences: {
 			nodeIntegration: true,
 			devTools: true,
-			enableRemoteModule: false,
 			contextIsolation: false,
 		},
 		show: false,
@@ -36,7 +35,7 @@ async function createWindow() {
 	}
 
 	win.on('closed', () => {
-		win = null;
+		win = undefined;
 	});
 
 	win.webContents.on('devtools-opened', () => {
@@ -70,9 +69,9 @@ app.on('activate', () => {
 		return;
 	}
 
-	if (win === null) {
-		void createWindow();
-	} else {
+	if (win) {
 		win.show();
+	} else {
+		void createWindow();
 	}
 });

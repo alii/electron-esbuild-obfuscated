@@ -8,6 +8,7 @@ render(
 		<div className="title-bar">
 			<p>Title</p>
 		</div>
+
 		<div className="padding">
 			<App />
 		</div>
